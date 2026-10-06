@@ -2,6 +2,9 @@
 
 ## Simulador de Playstation Store
 
-Plataforma estilo launcher inspirada na interface do PlayStation, onde o usuário pode gerenciar sua biblioteca digital, inicializar jogos instalados e navegar por uma loja integrada para adquirir novos títulos. A aplicação também permite personalizar configurações do perfil, ajustar preferências de sistema em um ambiente unificado. 
+__Plataforma estilo launcher inspirada na interface do PlayStation, onde o usuário pode gerenciar sua biblioteca digital, inicializar jogos instalados e navegar por uma loja integrada para adquirir novos títulos.__
+
+Veja um exemplo de Launcher semelhante (no caso, a interface do PS4). A imagem é meramente ilustrativa.
+![Diagrama de Classes](./documents/exemplo.png)
 
 ![Diagrama de Classes](./documents/classes.png)
