@@ -7,5 +7,7 @@ __Plataforma estilo launcher inspirada na interface do PlayStation, onde o usuá
 Veja um exemplo de Launcher semelhante (no caso, a interface do PS4). A imagem é meramente ilustrativa.
 ![Exemplo de interface](./documents/exemplo.jpg)
 
+## Diagrama de Classes
+
 Diagrama de classes ainda não finalizado.
 ![Diagrama de Classes](./documents/classes.png)
