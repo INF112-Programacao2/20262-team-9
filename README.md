@@ -25,7 +25,7 @@ Veja um exemplo de Launcher semelhante(Imagem é meramente ilustrativa).
 ## Diagrama de Classes
 
 <p align="center">
-  <img src="include/diagrama_de_classe.jpeg" alt="Diagrama de Classes UML" width="800"/>
+  <img src="documents/diagrama_de_classe.jpeg" alt="Diagrama de Classes UML" width="800"/>
 </p>
 
 
