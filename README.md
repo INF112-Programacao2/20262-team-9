@@ -1,7 +1,7 @@
 # 20262-team-9
 
 ## Simulador de Sistema de Console de Videogames
-O projeto consiste no desenvolvimento de um sistema que simula a experiência de utilização de um console de videogame, contendo uma interface inspirada nos sistemas de consoles modernos, permitindo ao usuário navegar por menus, acessar uma biblioteca de jogos, visualizar informações sobre os jogos e gerenciar diferentes funcionalidades do sistema.
+O projeto consiste no desenvolvimento de um sistema que simula a experiência de utilização de um console de videogame, contendo uma interface inspirada nos sistemas de consoles modernos, permitindo ao usuário navegar pelo menu, acessar uma biblioteca de jogos, visualizar informações sobre os jogos e gerenciar diferentes funcionalidades do sistema.
 O objetivo é reproduzir, de forma simplificada, a experiência proporcionada pelo sistema de um console, sem a necessidade de desenvolver ou simular o hardware do videogame.
 O projeto terá como foco a criação da interface, a organização das funcionalidades e a interação do usuário com o sistema.
 
@@ -27,10 +27,6 @@ Veja um exemplo de Launcher semelhante(Imagem é meramente ilustrativa).
 <p align="center">
   <img src="documents/diagrama_de_classe.jpeg" alt="Diagrama de Classes UML" width="800"/>
 </p>
-
-*calcularMedia() -> se trata de calcular média das avaliações
-
-*EM USUARIO, FALTA SENHA USUARIO!!
 
 
 
