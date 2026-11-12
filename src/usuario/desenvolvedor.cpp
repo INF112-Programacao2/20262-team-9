@@ -22,8 +22,12 @@ void Desenvolvedor::publicarJogo(Item* jogo){
 void Desenvolvedor::removerJogo(Item* jogo){
     if(jogo == nullptr)
         throw std::invalid_argument("O jogo nao pode estar vazio");
-    
-}
+
+for(std::vector<Item*>::iterator it = _jogosPublicados.begin();it != _jogosPublicados.end(); it++){
+    if(*it == jogo)
+    _jogosPublicados.erase(it);
+    return;
+}}
 
 const std::vector<Item*>& Desenvolvedor::getJogosPublicados() const {
     return _jogosPublicados;
