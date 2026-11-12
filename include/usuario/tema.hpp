@@ -9,13 +9,13 @@
  */
 class Tema {
 private:
-
     int _idTema;
     std::string _fonte;
     std::string _corDetalhe;
+    std::string _SonsAtivos;
 
 public:
-    Tema(int id = 1, std::string fonte = "Default", std::string cor = "Azul");
+    Tema(int id = 1, std::string fonte = "Default", std::string cor = "Azul", std::string SonsAtivos = "Padrao");
     ~Tema() = default;
 
     // Altera a fonte de texto da interface visual
@@ -25,11 +25,12 @@ public:
     void mudarCor(const std::string& novaCor);
 
     // Atualiza o conjunto de efeitos sonoros de navegação
-    void mudarEstSons();
+    void mudarEstSons(const std::string& novoEstilo);
 
     int getIdTema() const;
     std::string getFonte() const;
     std::string getCorDetalhe() const;
+    std::string getSonsAtivos() const;
 };
 
 #endif
