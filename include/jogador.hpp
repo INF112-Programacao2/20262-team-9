@@ -3,21 +3,20 @@
 
 #include <string>
 #include <vector>
-#include "usuario.hpp"
-#include "biblioteca.hpp"
-#include "trofeu.hpp"
-#include "cartao.hpp"
-#include "configuracoes.hpp"
-#include "notificacao.hpp"
+#include "Usuario.hpp"
+#include "Biblioteca.hpp"
+#include "Trofeu.hpp"
+#include "Cartao.hpp"
+#include "Configuracoes.hpp"
+#include "Notificacao.hpp"
 
-class Item; // Forward declaration
+class Item; 
 
 /* Subclasse de Usuario focada no consumidor final (jogar, comprar, interagir).
- * 
  * Interações no Diagrama:
- * - Herda de Usuario.
- * - Possui Biblioteca, Configuracoes, vetores de Trofeu, Cartao, Notificacao e lista de amigos (Jogador*).
- * - Realiza compras na Loja e faz/recebe Emprestimo.
+ * - Herda de Usuario (repassando id, nome, username e senha)[cite: 5].
+ * - Possui Biblioteca, Configuracoes, vetores de Trofeu, Cartao, Notificacao e lista de amigos (Jogador*)[cite: 5].
+ * - Realiza compras na Loja e faz/recebe Emprestimo[cite: 5].
  */
 class Jogador : public Usuario {
 private:
@@ -31,13 +30,13 @@ private:
     std::vector<Notificacao> caixaNotif;
 
 public:
-    Jogador(int id, std::string nome, double saldoInicial = 0.0);
+    Jogador(int id, std::string nome, std::string username, std::string senha, double saldoInicial = 0.0);
     ~Jogador() override = default;
 
     // Associa um novo cartão de crédito à conta
     void addCartao(const Cartao& cartao);
 
-    // Descada um cartão a partir de seu número
+    // Descadastra um cartão a partir de seu número
     void removerCartao(const std::string& numero);
 
     // Incrementa a carteira digital com créditos em R$
@@ -70,18 +69,10 @@ public:
     // Recebe e adiciona uma notificação na caixa de entrada
     void receberNotif(const Notificacao& notif);
 
-    double getSaldo() const { 
-        return saldo; 
-    }
-    Biblioteca& getBiblioteca() { 
-        return biblioteca; 
-    }
-    const std::vector<Jogador*>& getAmigos() const { 
-        return amigos; 
-    }
-    const std::vector<Trofeu>& getTrofeus() const { 
-        return trofeusConc; 
-    }
+    double getSaldo() const { return saldo; }
+    Biblioteca& getBiblioteca() { return biblioteca; }
+    const std::vector<Jogador*>& getAmigos() const { return amigos; }
+    const std::vector<Trofeu>& getTrofeus() const { return trofeusConc; }
 };
 
 #endif
