@@ -19,15 +19,14 @@ O sistema deverá simular o funcionamento de uma plataforma de console de videog
 - Desenvolvedores: cadastro de jogos e gerenciamento de informações, preços e tamanho dos jogos
 - Modos de execução: modo Interativo, com interface gráfica, e modo Headless, executado sem interface
 
-Veja exemplos de Launcher semelhante(Imagem é meramente ilustrativa).
-![Exemplo de interface (PlayStation)](./documents/exemplo.jpg)
-![Exemplo de interface (XBOX SERIES X)](./documents/exemplo2.jpg)
-![Exemplo de interface (STEAM DECK)](./documents/exemplo3.jpg)
-
+Veja um exemplo de Launcher semelhante(Imagem é meramente ilustrativa).
+![Exemplo de interface](./documents/exemplo.jpg)
 
 ## Diagrama de Classes
 
-![Diagrama de classes UML](.documents/diagrama_de_classe.jpeg)
+<p align="center">
+  <img src="documents/diagrama_de_classe.jpeg" alt="Diagrama de Classes UML" width="800"/>
+</p>
 
 
 
