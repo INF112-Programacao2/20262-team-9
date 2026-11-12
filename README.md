@@ -29,6 +29,7 @@ Veja um exemplo de Launcher semelhante(Imagem é meramente ilustrativa).
 </p>
 
 *calcularMedia() -> se trata de calcular média das avaliações
+
 *EM USUARIO, FALTA SENHA USUARIO!!
 
 
