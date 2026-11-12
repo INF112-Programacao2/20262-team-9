@@ -7,11 +7,11 @@
  */
 class Configuracoes {
 private:
-    bool notificacoes;
+    bool _notificacoes;
 
 public:
     Configuracoes(bool notificacoesAtivas = true);
-    ~Configuracoes() = default;
+    ~Configuracoes();
 
     // Habilita a exibição de pop-ups e alertas no console
     void ativarNotif();
@@ -19,9 +19,7 @@ public:
     // Silencia os alertas durante o uso
     void desativarNotif();
 
-    bool getNotificacoes() const {
-        return notificacoes;
-    }
+    bool getNotificacoes() const;
 };
 
 #endif

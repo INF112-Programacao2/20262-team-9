@@ -14,25 +14,19 @@ class Jogador;
  */
 class Avaliacao {
 private:
-    int nota;
-    std::string comentario;
-    Jogador* autor;
+    int _nota;
+    std::string _comentario;
+    Jogador* _autor;
 
 public:
     Avaliacao(int nota, std::string comentario, Jogador* autor);
-    ~Avaliacao() = default;
+    ~Avaliacao();
 
-    int getNota() const {
-        return nota;
-    }
+    int getNota() const;
 
-    std::string getComentario() const {
-        return comentario;
-    }
+    std::string getComentario() const;
     
-    Jogador* getAutor() const {
-        return autor;
-    }
+    Jogador* getAutor() const;
 };
 
 #endif

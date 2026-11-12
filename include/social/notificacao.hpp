@@ -10,22 +10,20 @@
  */
 class Notificacao {
 private:
-    std::string mensagem;
-    std::tm dataHora;
-    bool lida;
+    std::string _mensagem;
+    std::tm _dataHora;
+    bool _lida;
 
 public:
     Notificacao(std::string mensagem, std::tm dataHora);
-    ~Notificacao() = default;
+    ~Notificacao();
 
     // Altera o estado da notificação para visualizada
     void marcarComoLida();
 
-    std::string getMensagem() const {
-        return mensagem; }
+    std::string getMensagem() const;
 
-    bool isLida() const {
-        return lida; }
+    bool isLida() const;
 };
 
 #endif

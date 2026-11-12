@@ -13,12 +13,12 @@ class Jogador;
  */
 class Loja {
 private:
-    int idLoja;
-    std::vector<Item*> catalogo;
+    int _idLoja;
+    std::vector<Item*> _catalogo;
 
 public:
     Loja(int id = 1);
-    ~Loja() = default;
+    ~Loja();
 
     // Imprime/lista todos os itens cadastrados no catálogo
     void listarJogos() const;
@@ -32,12 +32,8 @@ public:
     // Gera lista de sugestões baseada nos gêneros favoritos do Jogador
     std::vector<Item*> recomendar(const Jogador* jogador) const;
 
-    void adicionarAoCatalogo(Item* jogo) { 
-        catalogo.push_back(jogo); 
-    }
-    const std::vector<Item*>& getCatalogo() const { 
-        return catalogo;
-    }
+    void adicionarAoCatalogo(Item* jogo);
+    const std::vector<Item*>& getCatalogo() const;
 };
 
 #endif

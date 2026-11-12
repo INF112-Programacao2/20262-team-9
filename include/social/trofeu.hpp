@@ -10,23 +10,17 @@
  */
 class Trofeu {
 private:
-    std::string nome;
-    std::string descricao;
-    std::string objetivo;
+    std::string _nome;
+    std::string _descricao;
+    std::string _objetivo;
 
 public:
     Trofeu(std::string nome, std::string descricao, std::string objetivo);
-    ~Trofeu() = default;
+    ~Trofeu();
 
-    std::string getNome() const {
-        return nome;
-    }
-    std::string getDescricao() const {
-        return descricao;
-    }
-    std::string getObjetivo() const {
-        return objetivo;
-    }
+    std::string getNome() const;
+    std::string getDescricao() const;
+    std::string getObjetivo() const;
 };
 
 #endif

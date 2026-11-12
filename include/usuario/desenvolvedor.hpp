@@ -3,8 +3,8 @@
 
 #include <string>
 #include <vector>
-#include "Usuario.hpp"
-#include "Item.hpp"
+#include "usuario.hpp"
+#include "item.hpp"
 
 /* Subclasse de Usuario referente a estúdios/criadores de jogos.
  * Interações no Diagrama:
@@ -13,11 +13,11 @@
  */
 class Desenvolvedor : public Usuario {
 private:
-    std::vector<Item*> jogosPublicados;
+    std::vector<Item*> _jogosPublicados;
 
 public:
     Desenvolvedor(int id, std::string nome, std::string username, std::string senha);
-    ~Desenvolvedor() override = default;
+    ~Desenvolvedor() override;
 
     // Insere um novo jogo no catálogo público da Loja
     void publicarJogo(Item* jogo);
@@ -25,7 +25,7 @@ public:
     // Retira um jogo de circulação do catálogo da Loja
     void removerJogo(Item* jogo);
 
-    const std::vector<Item*>& getJogosPublicados() const { return jogosPublicados; }
+    const std::vector<Item*>& getJogosPublicados() const;
 };
 
 #endif
