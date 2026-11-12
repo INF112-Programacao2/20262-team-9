@@ -28,7 +28,8 @@ Veja um exemplo de Launcher semelhante(Imagem é meramente ilustrativa).
   <img src="documents/diagrama_de_classe.jpeg" alt="Diagrama de Classes UML" width="800"/>
 </p>
 
-* calcularMedia() -> se trata de calcular média das avaliações
+*calcularMedia() -> se trata de calcular média das avaliações
+*EM USUARIO, FALTA SENHA USUARIO!!
 
 
 
