@@ -11,6 +11,7 @@
 #include "../social/notificacao.hpp"
 
 class Item;
+class Avaliacao;
 
 /* Subclasse de Usuario focada no consumidor final (jogar, comprar, interagir).
  * Interações no Diagrama:
@@ -46,7 +47,7 @@ public:
     void addGeneroFav(const std::string& genero);
 
     // Escreve uma avaliação para um jogo que possui
-    void avaliarJogo(Item* jogo, int nota, const std::string& comentario);
+    Avaliacao avaliarJogo(int nota, const std::string& comentario);
 
     // Processa a compra de um item da Loja, debitando saldo e adicionando à Biblioteca
     bool comprarJogo(Item* jogo);

@@ -4,6 +4,8 @@
 #include <vector>
 #include "item.hpp"
 
+class Item;
+
 /**
  * @brief Gerencia o acervo pessoal do Jogador, separando jogos comprados e instalados.
  * 
@@ -31,6 +33,7 @@ public:
     const std::vector<Item*>& getJogosAdquiridos() const;
     const std::vector<Item*>& getJogosInstalados() const;
     void adicionarJogo(Item* jogo);
+    void adicionarAvaliacaoJogo(Item* jogo, Avaliacao avaliacao);
 };
 
 #endif
