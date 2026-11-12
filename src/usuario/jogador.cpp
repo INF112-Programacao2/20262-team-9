@@ -1,5 +1,5 @@
 #include <string>
-#include  "../include/usuario/jogador.hpp"
+#include  "../../include/usuario/jogador.hpp"
 
     Jogador::Jogador(int id, std::string nome, std::string username, std::string senha, double saldoInicial = 0.0):
     Usuario(id, nome, username, senha), _saldo(saldoInicial){}
