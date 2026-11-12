@@ -13,15 +13,15 @@ class Jogador;
  */
 class Emprestimo {
 private:
-    Item* jogoEmprestado;
-    Jogador* donojogador;
-    Jogador* receptor;
-    std::tm dataInicio;
-    std::tm dataFim;
+    Item* _jogoEmprestado;
+    Jogador* _donojogador;
+    Jogador* _receptor;
+    std::tm _dataInicio;
+    std::tm _dataFim;
 
 public:
     Emprestimo(Item* jogo, Jogador* dono, Jogador* receptor, std::tm inicio, std::tm fim);
-    ~Emprestimo() = default;
+    ~Emprestimo();
 
     // Transfere temporariamente a permissão de execução para o receptor
     bool emprestar();
@@ -29,15 +29,9 @@ public:
     // Finaliza a cessão e devolve o acesso total ao proprietário original
     bool devolver();
 
-    Item* getJogoEmprestado() const { 
-        return jogoEmprestado; 
-    }
-    Jogador* getDono() const { 
-        return donojogador; 
-    }
-    Jogador* getReceptor() const { 
-        return receptor; 
-    }
+    Item* getJogoEmprestado() const;
+    Jogador* getDono() const;
+    Jogador* getReceptor() const; 
 };
 
 #endif

@@ -10,9 +10,9 @@
 class Tema {
 private:
 
-    int idTema;
-    std::string fonte;
-    std::string corDetalhe;
+    int _idTema;
+    std::string _fonte;
+    std::string _corDetalhe;
 
 public:
     Tema(int id = 1, std::string fonte = "Default", std::string cor = "Azul");
@@ -27,15 +27,9 @@ public:
     // Atualiza o conjunto de efeitos sonoros de navegação
     void mudarEstSons();
 
-    int getIdTema() const { 
-        return idTema;
-    }
-    std::string getFonte() const {
-        return fonte;
-    }
-    std::string getCorDetalhe() const {
-        return corDetalhe;
-    }
+    int getIdTema() const;
+    std::string getFonte() const;
+    std::string getCorDetalhe() const;
 };
 
 #endif

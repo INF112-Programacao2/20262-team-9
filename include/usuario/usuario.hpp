@@ -11,15 +11,15 @@
  */
 class Usuario {
 protected:
-    int idUsuario;
-    std::string nome;
-    std::string username;
-    bool logado;
-    Tema tema;
+    int _idUsuario;
+    std::string _nome;
+    std::string _username;
+    bool _logado;
+    Tema _tema;
 
 public:
     Usuario(int idUsuario, std::string nome, std::string username, std::string senha);
-    virtual ~Usuario() = default;
+    virtual ~Usuario();
 
     // Inicializa as estruturas do perfil no sistema
     void criarPerfil();
@@ -45,14 +45,14 @@ public:
     // Método virtual de execução padrão para o perfil
     virtual void jogar();
 
-    int getIdUsuario() const { return idUsuario; }
-    std::string getNome() const { return nome; }
-    std::string getUsername() const { return username; }
-    bool isLogado() const { return logado; }
+    int getIdUsuario() const;
+    std::string getNome() const;
+    std::string getUsername() const;
+    bool isLogado() const;
 
     // Retorna referência ao Tema para permitir customização direta
-    Tema& getTema() { return tema; }
-    const Tema& getTema() const { return tema; }
+    Tema& getTema();
+    const Tema& getTema() const;
 };
 
 #endif

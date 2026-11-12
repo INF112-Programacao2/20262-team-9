@@ -9,19 +9,15 @@
  */
 class Cartao {
 private:
-    std::string numero;
-    std::string titular;
+    std::string _numero;
+    std::string _titular;
 
 public:
     Cartao(std::string numero, std::string titular);
-    ~Cartao() = default;
+    ~Cartao();
 
-    std::string getNumero() const { 
-        return numero;
-    }
-    std::string getTitular() const {
-        return titular;
-    }
+    std::string getNumero() const;
+    std::string getTitular() const;
 };
 
 #endif
