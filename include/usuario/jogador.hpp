@@ -4,13 +4,13 @@
 #include <string>
 #include <vector>
 #include "usuario.hpp"
-#include "../biblioteca.hpp"
-#include "../trofeu.hpp"
-#include "../cartao.hpp"
-#include "../configuracoes.hpp"
-#include "../notificacao.hpp"
+#include "configuracoes.hpp"
+#include "../loja/biblioteca.hpp"
+#include "../loja/cartao.hpp"
+#include "../social/trofeu.hpp"
+#include "../social/notificacao.hpp"
 
-class Item; 
+class Item;
 
 /* Subclasse de Usuario focada no consumidor final (jogar, comprar, interagir).
  * Interações no Diagrama:
