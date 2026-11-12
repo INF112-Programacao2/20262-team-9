@@ -3,12 +3,12 @@
 
 #include <string>
 #include <vector>
-#include "Usuario.hpp"
-#include "Biblioteca.hpp"
-#include "Trofeu.hpp"
-#include "Cartao.hpp"
-#include "Configuracoes.hpp"
-#include "Notificacao.hpp"
+#include "usuario.hpp"
+#include "../biblioteca.hpp"
+#include "../trofeu.hpp"
+#include "../cartao.hpp"
+#include "../configuracoes.hpp"
+#include "../notificacao.hpp"
 
 class Item; 
 
@@ -20,18 +20,18 @@ class Item;
  */
 class Jogador : public Usuario {
 private:
-    double saldo;
-    std::vector<std::string> generosFav;
-    std::vector<Trofeu> trofeusConc;
-    std::vector<Jogador*> amigos;
-    Biblioteca biblioteca;
-    std::vector<Cartao> cartoes;
-    Configuracoes config;
-    std::vector<Notificacao> caixaNotif;
+    double _saldo;
+    std::vector<std::string> _generosFav;
+    std::vector<Trofeu> _trofeusConc;
+    std::vector<Jogador*> _amigos;
+    Biblioteca _biblioteca;
+    std::vector<Cartao> _cartoes;
+    Configuracoes _config;
+    std::vector<Notificacao> _caixaNotif;
 
 public:
     Jogador(int id, std::string nome, std::string username, std::string senha, double saldoInicial = 0.0);
-    ~Jogador() override = default;
+    ~Jogador() override;
 
     // Associa um novo cartão de crédito à conta
     void addCartao(const Cartao& cartao);
@@ -69,10 +69,10 @@ public:
     // Recebe e adiciona uma notificação na caixa de entrada
     void receberNotif(const Notificacao& notif);
 
-    double getSaldo() const { return saldo; }
-    Biblioteca& getBiblioteca() { return biblioteca; }
-    const std::vector<Jogador*>& getAmigos() const { return amigos; }
-    const std::vector<Trofeu>& getTrofeus() const { return trofeusConc; }
+    double getSaldo() const;
+    Biblioteca& getBiblioteca();
+    const std::vector<Jogador*>& getAmigos() const;
+    const std::vector<Trofeu>& getTrofeus() const;
 };
 
 #endif

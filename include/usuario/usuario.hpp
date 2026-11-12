@@ -2,7 +2,7 @@
 #define USUARIO_HPP
 
 #include <string>
-#include "Tema.hpp"
+#include "../tema.hpp"
 
 /* Classe base abstrata que representa qualquer conta cadastrada no console. 
  * Interações no Diagrama:
