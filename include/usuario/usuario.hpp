@@ -10,18 +10,15 @@
  * - Possui 1 objeto Tema via composição.
  */
 class Usuario {
-private:
-    std::string senha;
-    bool logado;
-
 protected:
     int idUsuario;
     std::string nome;
     std::string username;
+    bool logado;
     Tema tema;
 
 public:
-    Usuario(int id, std::string nome, std::string username, std::string senha);
+    Usuario(int idUsuario, std::string nome, std::string username, std::string senha);
     virtual ~Usuario() = default;
 
     // Inicializa as estruturas do perfil no sistema
