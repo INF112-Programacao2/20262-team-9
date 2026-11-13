@@ -33,7 +33,7 @@ public:
     const std::vector<Item*>& getJogosAdquiridos() const;
     const std::vector<Item*>& getJogosInstalados() const;
     void adicionarJogo(Item* jogo);
-    void adicionarAvaliacaoJogo(Item* jogo, Avaliacao avaliacao);
+    void adicionarAvaliacaoJogo(Item* jogo, Avaliacao* avaliacao);
 };
 
 #endif
