@@ -5,9 +5,11 @@
 Biblioteca::Biblioteca(int id):_idBiblioteca(id){}
 Biblioteca::~Biblioteca(){}
 
+// Instala um jogo adquirido.
 bool Biblioteca::instalar(Item* jogo){
 
 }
+// Remove a instalação sem remover o jogo da biblioteca.
 bool Biblioteca::desinstalar(Item*jogo){
 
 }
@@ -20,9 +22,11 @@ const std::vector<Item*>& Biblioteca::getJogosAdquiridos() const{
 const std::vector<Item*>& Biblioteca::getJogosInstalados() const{
     return _jogosInstalados;
 }
+// Adiciona um jogo à coleção adquirida.
 void Biblioteca::adicionarJogo(Item* jogo){
 
 }
+// Registra uma avaliação para um jogo da biblioteca.
 void Biblioteca::adicionarAvaliacaoJogo(Item* jogo, Avaliacao* avaliacao){
 
 }
