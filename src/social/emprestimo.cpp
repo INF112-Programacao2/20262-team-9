@@ -11,7 +11,7 @@ bool Emprestimo::emprestar(){
 }
 // Finaliza o empréstimo e devolve o jogo ao proprietário.
 bool Emprestimo::devolver(){
-    
+
 }
 // Retorna o jogo associado ao empréstimo.
 Item* Emprestimo::getJogoEmprestado()const{
