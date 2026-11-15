@@ -51,7 +51,6 @@ public:
     bool isLogado() const;
 
     // Retorna referência ao Tema para permitir customização direta
-    Tema& getTema();
     const Tema& getTema() const;
 };
 
