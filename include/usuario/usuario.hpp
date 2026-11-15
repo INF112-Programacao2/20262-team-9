@@ -14,6 +14,7 @@ protected:
     int _idUsuario;
     std::string _nome;
     std::string _username;
+    std::string _senha;
     bool _logado;
     Tema _tema;
 
@@ -25,7 +26,7 @@ public:
     void criarPerfil();
 
     // Atualiza o nome de exibição do usuário
-    void editarPerfil(const std::string& novoNome);
+    void alterarNome(const std::string& novoNome);
 
     // Atualiza o identificador único de login (@username)
     void alterarUsername(const std::string& novoUsername);

@@ -1,4 +1,4 @@
-#include "Tema.hpp"
+#include "../../include/usuario/tema.hpp"
 
 Tema::Tema(int id, std::string fonte, std::string cor, std::string SonsAtivos)
     : _idTema(id), _fonte(fonte), _corDetalhe(cor), _SonsAtivos(SonsAtivos) {}

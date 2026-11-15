@@ -1,9 +1,10 @@
-#include "Configuracoes.hpp"
+#include "../../include/usuario/configuracoes.hpp"
 
-Configuracoes::Configuracoes(bool notificacoesAtivas)
-    : _notificacoes(notificacoesAtivas) {}
+Configuracoes::Configuracoes(){ 
+    _notificacoes = true;
+}
 
-Configuracoes::~Configuracoes() {}
+Configuracoes::~Configuracoes(){}
 
 void Configuracoes::ativarNotif() {
     _notificacoes = true;

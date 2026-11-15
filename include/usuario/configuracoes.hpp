@@ -10,7 +10,7 @@ private:
     bool _notificacoes;
 
 public:
-    Configuracoes(bool notificacoesAtivas = true);
+    Configuracoes();
     ~Configuracoes();
 
     // Habilita a exibição de pop-ups e alertas no console
