@@ -15,7 +15,7 @@ private:
     bool _lida;
 
 public:
-    Notificacao(std::string mensagem, std::tm dataHora);
+    Notificacao(std::string mensagem);
     ~Notificacao();
 
     // Altera o estado da notificação para visualizada
