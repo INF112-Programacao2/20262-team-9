@@ -12,6 +12,7 @@
 
 class Item;
 class Avaliacao;
+class PedidoAmizade;
 
 /* Subclasse de Usuario focada no consumidor final (jogar, comprar, interagir).
  * Interações no Diagrama:
@@ -29,6 +30,7 @@ private:
     std::vector<Cartao> _cartoes;
     Configuracoes _config;
     std::vector<Notificacao> _caixaNotif;
+    std::vector<PedidoAmizade> _pedidosAmizade;
 
 public:
     Jogador(int id, std::string nome, std::string username, std::string senha, double saldoInicial = 0.0);
@@ -59,16 +61,21 @@ public:
     void solicitarAmizade(Jogador* amigo);
 
     // Rejeita pedido de amizade pendente
-    void negarAmizade(Jogador* amigo);
+    void negarAmizade(PedidoAmizade* pedido);
 
     // Adiciona o jogador solicitante à lista de amigos
-    void aceitarAmizade(Jogador* amigo);
+    void aceitarAmizade(PedidoAmizade* pedido);
 
     // Exibe a lista de conquistas obtidas
     void listarTrofeu() const;
 
     // Recebe e adiciona uma notificação na caixa de entrada
     void receberNotif(const Notificacao& notif);
+
+    // Recebe e adiciona um pedido de amizade na lista de pedidos
+    void receberPedido(const PedidoAmizade& pedido);
+
+    void addAmigo(Jogador* amigo);
 
     double getSaldo() const;
     Biblioteca& getBiblioteca();

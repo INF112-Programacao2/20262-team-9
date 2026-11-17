@@ -3,6 +3,8 @@
 #include "../../include/usuario/jogador.hpp"
 #include "../../include/loja/cartao.hpp"
 #include "../../include/social/avaliacao.hpp"
+#include "../../include/social/notificacao.hpp"
+#include "../../include/social/pedidoAmizade.hpp"
 
     Jogador::Jogador(int id, std::string nome, std::string username, std::string senha, double saldoInicial = 0.0):
     Usuario(id, nome, username, senha), _saldo(saldoInicial){}
@@ -53,29 +55,58 @@
     }
 
     // Envia solicitação de amizade a outro Jogador
-    void Jogador::solicitarAmizade(Jogador* amigo){}
+    void Jogador::solicitarAmizade(Jogador* amigo){
+        PedidoAmizade pedido(this, amigo);
+        amigo->receberPedido(pedido);
+    }
 
     // Rejeita pedido de amizade pendente
-    void Jogador::negarAmizade(Jogador* amigo){}
+    void Jogador::negarAmizade(PedidoAmizade* pedido){
+        for(int i = 0; i < size(_pedidosAmizade); i++)
+            if(_pedidosAmizade[i].getRemetente() == pedido->getRemetente() 
+            && _pedidosAmizade[i].getDestinatario() == pedido->getDestinatario())
+                _pedidosAmizade.erase(_pedidosAmizade.begin() + i);
+    }
 
     // Adiciona o jogador solicitante à lista de amigos
-    void Jogador::aceitarAmizade(Jogador* amigo){}
+    void Jogador::aceitarAmizade(PedidoAmizade* pedido){
+        for(int i = 0; i < size(_pedidosAmizade); i++)
+
+            if(_pedidosAmizade[i].getRemetente() == pedido->getRemetente() 
+               && _pedidosAmizade[i].getDestinatario() == pedido->getDestinatario()){
+
+                pedido->getRemetente()->addAmigo(pedido->getDestinatario());
+                pedido->getDestinatario()->addAmigo(pedido->getRemetente());
+
+                _pedidosAmizade.erase(_pedidosAmizade.begin() + i);
+            }
+    }
 
     // Exibe a lista de conquistas obtidas
     void Jogador::listarTrofeu() const{}
 
     // Recebe e adiciona uma notificação na caixa de entrada
-    void Jogador::receberNotif(const Notificacao& notif){}
+    void Jogador::receberNotif(const Notificacao& notif){
+        _caixaNotif.push_back(notif);
+    }
+
+    void Jogador::receberPedido(const PedidoAmizade& pedido){
+        _pedidosAmizade.push_back(pedido);
+    }
+
+    void Jogador::addAmigo(Jogador* amigo){
+        _amigos.push_back(amigo);
+    }
 
     double Jogador::getSaldo() const { 
         return _saldo; 
     }
-    Biblioteca& Jogador::getBiblioteca() { 
+    Biblioteca& Jogador::getBiblioteca(){ 
         return _biblioteca; 
     }
-    const std::vector<Jogador*>& Jogador::getAmigos() const { 
+    const std::vector<Jogador*>& Jogador::getAmigos() const{ 
         return _amigos; 
     }
-    const std::vector<Trofeu>& Jogador::getTrofeus() const { 
+    const std::vector<Trofeu>& Jogador::getTrofeus() const{ 
         return _trofeusConc; 
     }

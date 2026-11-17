@@ -1,15 +1,17 @@
 #include <memory>
 #include <string>
 #include "../../include/social/pedidoAmizade.hpp"
+#include "../../include/usuario/jogador.hpp"
 
-PedidoAmizade::PedidoAmizade(std::string mensagem, Jogador* remetente , Jogador* destinatario) :
- Notificacao(mensagem), _rementente(remetente), _destinatario(destinatario){}
+PedidoAmizade::PedidoAmizade(Jogador* remetente , Jogador* destinatario) :
+    Notificacao("Voce recebeu um pedido de amizade de " + remetente->getNome()),
+    _rementente(remetente), _destinatario(destinatario){}
 
 PedidoAmizade::~PedidoAmizade(){}
 
-Jogador* PedidoAmizade::get_remetente(){
+Jogador* PedidoAmizade::getRemetente(){
     return _rementente;
 }
-Jogador* PedidoAmizade::get_destinatario(){
+Jogador* PedidoAmizade::getDestinatario(){
     return _destinatario;
 }

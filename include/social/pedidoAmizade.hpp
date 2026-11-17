@@ -6,17 +6,17 @@
 
 class Jogador;
 
-class PedidoAmizade : Notificacao{
+class PedidoAmizade : public Notificacao{
     private:
     Jogador* _rementente;
     Jogador* _destinatario;
 
     public:
-    PedidoAmizade(std::string mensagem, Jogador* rementente , Jogador* destinatario);
+    PedidoAmizade(Jogador* rementente , Jogador* destinatario);
     ~PedidoAmizade();
 
-    Jogador* get_remetente();
-    Jogador* get_destinatario();
+    Jogador* getRemetente();
+    Jogador* getDestinatario();
 };
 
 #endif;
