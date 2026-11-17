@@ -50,9 +50,6 @@ void Usuario::logout(){
     _logado = false;
 }
 
-// Método virtual de execução padrão para o perfil
-void Usuario::jogar(){}
-
 int Usuario::getIdUsuario() const{
     return _idUsuario;
 }

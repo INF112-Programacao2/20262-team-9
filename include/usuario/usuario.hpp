@@ -44,7 +44,7 @@ public:
     void logout();
 
     // Método virtual de execução padrão para o perfil
-    virtual void jogar();
+    virtual void jogar() = 0;
 
     int getIdUsuario() const;
     std::string getNome() const;
