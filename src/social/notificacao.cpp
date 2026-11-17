@@ -8,15 +8,15 @@ Notificacao::~Notificacao(){};
 
 // Marca a notificação como lida.
 void Notificacao::marcarComoLida(){
-
+    _lida = true;
 }
 
 // Retorna o texto da notificação.
 std::string Notificacao::getMensagem()const {
-
+    return _mensagem;
 }
 
 // Informa se a notificação já foi lida.
 bool Notificacao::isLida()const{
-   
+   return _lida;
 }
