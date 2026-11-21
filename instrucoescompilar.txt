@@ -1,0 +1,25 @@
+(Windows)
+# Gerar aquivos de configuração do CMake na pasta build
+cmake -B build
+# compilar o projeto
+cmake --build build
+# executar o programa
+build\executavel.exe
+
+-----------------------------------------------------------
+
+(Linux/WSL)
+# instalar dependências do sistema (caso ja tenha, pular para *)
+sudo apt update
+sudo apt install -y build-essential cmake git ninja-build \
+    libx11-dev libxrandr-dev libxcursor-dev libxi-dev \
+    libudev-dev libgl1-mesa-dev \
+    libopenal-dev libflac-dev libvorbis-dev \
+    libfreetype-dev libharfbuzz-dev libmbedtls-dev libssh2-1-dev
+    
+# *configurar build limpa
+cmake -S . -B build-wsl -G Ninja -DCMAKE_BUILD_TYPE=Release
+# compilar
+cmake --build build-wsl -- -j$(nproc)
+# executar
+./build-wsl/executavel
